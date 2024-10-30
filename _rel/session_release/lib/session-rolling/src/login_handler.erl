@@ -11,8 +11,17 @@ Req0 = cowboy_req:reply(200, #{<<"content-type">> => <<"text/html">>}, <<"<!DOCT
 </head>
 <body>
 
-<h1>This is a Heading</h1>
-<p>This is a paragraph.</p>
+<form action=\"http://localhost:8080/handlelogin\", method=POST>
+<div>
+<label for=\"a\">email</label>
+<input name=\"email\" id=\"a\" value=\"email\"/>
+</div>
+
+<div>
+<label for=\"b\">password</label>
+<input name=\"password\" id=\"b\" value=\"password\"/>
+</div>
+</form>
 
 </body>
 </html>">>, Req),

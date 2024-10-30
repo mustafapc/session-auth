@@ -1,9 +1,9 @@
 {application, 'session', [
 	{description, ""},
 	{vsn, "rolling"},
-	{modules, ['login_handler','session_app','session_sup']},
+	{modules, ['login_handler','main_handler','session_app','session_sup']},
 	{registered, [session_sup]},
-	{applications, [kernel,stdlib,cowboy]},
+	{applications, [kernel,stdlib,cowboy,gun]},
 	{optional_applications, []},
 	{mod, {session_app, []}},
 	{env, []}

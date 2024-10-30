@@ -6,7 +6,7 @@
 
 start(_Type, _Args) ->
 Dispatch = cowboy_router:compile([
-{'_', [{"/login", login_handler, []}]}                                
+{'_', [{"/login", login_handler, []}, {"/:name", main_handler, []}]}                                
                                  ]),
 {ok, _} = cowboy:start_clear(http_listner, [{port, 8080}], #{env => #{dispatch => Dispatch}}),
   session_sup:start_link().

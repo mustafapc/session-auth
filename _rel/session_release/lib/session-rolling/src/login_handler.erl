@@ -21,6 +21,10 @@ Req0 = cowboy_req:reply(200, #{<<"content-type">> => <<"text/html">>}, <<"<!DOCT
 <label for=\"b\">password</label>
 <input name=\"password\" id=\"b\" value=\"password\"/>
 </div>
+
+<div>
+<button>submit</button>
+</div>
 </form>
 
 </body>
